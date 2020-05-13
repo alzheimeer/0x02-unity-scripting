@@ -43,13 +43,13 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
-            score += 1;
-            Debug.Log("Score: " + score);
+            score++;
+            Debug.Log("Score: " + score.ToString());
         }
         if (other.gameObject.CompareTag("Trap"))
         {
-            health -= 1;
-            Debug.Log("Health: " + health);
+            health--;
+            Debug.Log("Health: " + health.ToString());
         }
         if (other.gameObject.CompareTag("Goal"))
         {
